@@ -162,10 +162,10 @@
   <tr>
     <!-- <td width="33%" valign="top"><a href="images/xyc.jpg"><img src="images/xyc.jpg" width="100%" style="border-radius:15px"></a> -->
     <td width="30%" valign="top"><a href="images/xyc.jpg"><img src="images/xyc.jpg" width="100%" style="border-radius:15px"></a>
-    <p align=center style="font-size:90%">
+    <p align=center style="font-size:85%">
     | <a href="https://scholar.google.com/citations?user=Vkn0uq4AAAAJ&hl=en" target="_blank">Google Scholar</a> |
     <a href="https://www.linkedin.com/in/xiaoyi-jeremy-cai-541656a3/" target="_blank">LinkedIn</a> |
-    <a href="docs/xyc_cv_2024_Jun.pdf" target="_blank">CV</a> |
+    <a href="docs/xyc_cv_2024_Aug.pdf" target="_blank">CV</a> |
     </p>
     </td>
     <td width="70%" valign="top" align="justify">
@@ -201,7 +201,9 @@
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
 
-    <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Preprint</sectionheading></td></tr>
+
+
+    <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Journal</sectionheading></td></tr>
 
     <tr class="pub">
         <td class="pub_thumbnail">
@@ -213,50 +215,24 @@
           <p><a href="https://xiaoyi-cai.github.io/evora/" target="_blank">
           <heading>EVORA: Deep Evidential Traversability Learning for Risk-Aware Off-Road Autonomy</heading></a><br>
           <b>Xiaoyi Cai</b>, Siddharth Ancha, Lakshay Sharma, Philip R. Osteen, Bernadette Bucher, Stephen Phillips, Jiuguang Wang, Michael Everett, Nicholas Roy, Jonathan P. How<br>
-          <span class="pub_venue">ArXiv Preprint</span> (under review for T-RO)
+          <span class="pub_venue">T-RO 2024</span>
           </p>
     
           <div>
           <a href="https://xiaoyi-cai.github.io/evora/" target="_blank">webpage</a> |
-          <a href="https://arxiv.org/pdf/2311.06234.pdf" target="_blank">paper</a> |
+          <a href="https://ieeexplore.ieee.org/abstract/document/10606099" target="_blank">paper</a> |
           <a href="javascript:toggleblock('evora_abs')">abstract</a> |
           <a href="https://youtu.be/pV7GxAFYuto" target="_blank">video</a>
     
-          <p align="justify"> <i id="evora_abs">Traversing terrain with good traction is crucial for achieving fast off-road navigation. Instead of manually designing costs based on terrain features, existing methods learn terrain properties directly from data via self-supervision, but challenges remain to properly quantify and mitigate risks due to uncertainties in learned models. This work efficiently quantifies both aleatoric and epistemic uncertainties by learning discrete traction distributions and probability densities of the traction predictor's latent features. Leveraging evidential deep learning, we parameterize Dirichlet distributions with the network outputs and propose a novel uncertainty-aware squared Earth Mover's distance loss with a closed-form expression that improves learning accuracy and navigation performance. The proposed risk-aware planner simulates state trajectories with the worst-case expected traction to handle aleatoric uncertainty, and penalizes trajectories moving through terrain with high epistemic uncertainty. Our approach is extensively validated in simulation and on wheeled and quadruped robots, showing improved navigation performance compared to methods that assume no slip, assume the expected traction, or optimize for the worst-case expected cost.</i></p>
+          <p align="justify"> <i id="evora_abs">Traversing terrain with good traction is crucial for achieving fast off-road navigation. Instead of manually designing costs based on terrain features, existing methods learn terrain properties directly from data via self-supervision to automatically penalize trajectories moving through undesirable terrain, but challenges remain in properly quantifying and mitigating the risk due to uncertainty in the learned models. To this end, we present evidential off-road autonomy (EVORA), a unified framework to learn uncertainty-aware traction model and plan risk-aware trajectories. For uncertainty quantification, we efficiently model both aleatoric and epistemic uncertainty by learning discrete traction distributions and probability densities of the traction predictor’s latent features. Leveraging evidential deep learning, we parameterize Dirichlet distributions with the network outputs and propose a novel uncertainty-aware squared Earth Mover’s Distance loss with a closed-form expression that improves learning accuracy and navigation performance. For risk-aware navigation, the proposed planner simulates state trajectories with the worst-case expected traction to handle aleatoric uncertainty and penalizes trajectories moving through terrain with high epistemic uncertainty. Our approach is extensively validated in simulation and on wheeled and quadruped robots, showing improved navigation performance compared to methods that assume no slip, assume the expected traction, or optimize for the worst-case expected cost.</i></p>
           <script xml:space="preserve" language="JavaScript">
             hideblock('evora_abs');
           </script>
           </div>
         </td>
       </tr>
-    
-      <tr class="pub">
-        <td class="pub_thumbnail">
-            <img class="pub" src="images/2024_cgd.png" alt="image not found" width="93%">
-        </td>
-        <td class="pub_text">
-          <p><a href="https://arxiv.org/abs/2405.01758" target="_blank">
-          <heading>CGD: Constraint-Guided Diffusion Policies for UAV Trajectory Planning</heading></a><br>
-          Kota Kondo, Andrea Tagliabue, <b>Xiaoyi Cai</b>, Claudius Tewari, Olivia Garcia, Marcos Espitia-Alvarez, Jonathan P. How<br>
-          <span class="pub_venue">ArXiv Preprint</span> (under review for Control and Decision Conference)
-          </p>
-    
-          <div>
-            <a href="https://arxiv.org/pdf/2405.01758" target="_blank">paper</a> |
-            <a href="javascript:toggleblock('2024_cgd_abs')">abstract</a>
-    
-          <p align="justify"> <i id="2024_cgd_abs">Traditional optimization-based planners, while effective, suffer from high computational costs, resulting in slow trajectory generation. A successful strategy to reduce computation time involves using Imitation Learning (IL) to develop fast neural network (NN) policies from those planners, which are treated as expert demonstrators. Although the resulting NN policies are effective at quickly generating trajectories similar to those from the expert, (1) their output does not explicitly account for dynamic feasibility, and (2) the policies do not accommodate changes in the constraints different from those used during training.
-            To overcome these limitations, we propose Constraint-Guided Diffusion (CGD), a novel IL-based approach to trajectory planning. CGD leverages a hybrid learning/online optimization scheme that combines diffusion policies with a surrogate efficient optimization problem, enabling the generation of collision-free, dynamically feasible trajectories. The key ideas of CGD include dividing the original challenging optimization problem solved by the expert into two more manageable sub-problems: (a) efficiently finding collision-free paths, and (b) determining a dynamically-feasible time-parametrization for those paths to obtain a trajectory. Compared to conventional neural network architectures, we demonstrate through numerical evaluations significant improvements in performance and dynamic feasibility under scenarios with new constraints never encountered during training.</i></p>
-          <script xml:space="preserve" language="JavaScript">
-            hideblock('2024_cgd_abs');
-          </script>
-          </div>
-        </td>
-      </tr>
-    
 
 
-    <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Journal</sectionheading></td></tr>
 
     <tr class="pub">
         <td class="pub_thumbnail">
@@ -563,6 +539,35 @@
 
   
 
+
+  <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Preprint</sectionheading></td></tr>
+
+
+  
+    <tr class="pub">
+      <td class="pub_thumbnail">
+          <img class="pub" src="images/2024_cgd.png" alt="image not found" width="93%">
+      </td>
+      <td class="pub_text">
+        <p><a href="https://arxiv.org/abs/2405.01758" target="_blank">
+        <heading>CGD: Constraint-Guided Diffusion Policies for UAV Trajectory Planning</heading></a><br>
+        Kota Kondo, Andrea Tagliabue, <b>Xiaoyi Cai</b>, Claudius Tewari, Olivia Garcia, Marcos Espitia-Alvarez, Jonathan P. How<br>
+        <span class="pub_venue">ArXiv Preprint</span>
+        </p>
+  
+        <div>
+          <a href="https://arxiv.org/pdf/2405.01758" target="_blank">paper</a> |
+          <a href="javascript:toggleblock('2024_cgd_abs')">abstract</a>
+  
+        <p align="justify"> <i id="2024_cgd_abs">Traditional optimization-based planners, while effective, suffer from high computational costs, resulting in slow trajectory generation. A successful strategy to reduce computation time involves using Imitation Learning (IL) to develop fast neural network (NN) policies from those planners, which are treated as expert demonstrators. Although the resulting NN policies are effective at quickly generating trajectories similar to those from the expert, (1) their output does not explicitly account for dynamic feasibility, and (2) the policies do not accommodate changes in the constraints different from those used during training.
+          To overcome these limitations, we propose Constraint-Guided Diffusion (CGD), a novel IL-based approach to trajectory planning. CGD leverages a hybrid learning/online optimization scheme that combines diffusion policies with a surrogate efficient optimization problem, enabling the generation of collision-free, dynamically feasible trajectories. The key ideas of CGD include dividing the original challenging optimization problem solved by the expert into two more manageable sub-problems: (a) efficiently finding collision-free paths, and (b) determining a dynamically-feasible time-parametrization for those paths to obtain a trajectory. Compared to conventional neural network architectures, we demonstrate through numerical evaluations significant improvements in performance and dynamic feasibility under scenarios with new constraints never encountered during training.</i></p>
+        <script xml:space="preserve" language="JavaScript">
+          hideblock('2024_cgd_abs');
+        </script>
+        </div>
+      </td>
+    </tr>
+  
 
 
 
