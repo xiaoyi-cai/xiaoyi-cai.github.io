@@ -203,6 +203,65 @@
 
 
 
+
+
+    <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Preprint</sectionheading></td></tr>
+
+  
+    <tr class="pub">
+        <td class="pub_thumbnail">
+            <img class="pub" src="images/2024_pietra.png" alt="image not found" width="93%">
+        </td>
+        <td class="pub_text">
+          <p><a href="https://www.arxiv.org/abs/2409.03005" target="_blank">
+          <heading>PIETRA: Physics-Informed Evidential Learning for Traversing Out-of-Distribution Terrain</heading></a><br>
+          Xiaoyi Cai, James Queeney, Tong Xu, Aniket Datar, Chenhui Pan, Max Miller, Ashton Flather, Philip R. Osteen, Nicholas Roy, Xuesu Xiao, Jonathan P. How<br>
+          <span class="pub_venue">arXiv</span>
+          </p>
+    
+          <div>
+            <a href="https://www.arxiv.org/pdf/2409.03005" target="_blank">paper</a> |
+            <a href="javascript:toggleblock('2024_pietra_abs')">abstract</a> |
+            <a href="https://youtu.be/OTnNZ96oJRk?si=zh7knrEiJrJsaM-3" target="_blank">video</a>
+    
+          <p align="justify"> <i id="2024_pietra_abs">Self-supervised learning is a powerful approach for developing traversability models for off-road navigation, but these models often struggle with inputs unseen during training. Existing methods utilize techniques like evidential deep learning to quantify model uncertainty, helping to identify and avoid out-of-distribution terrain. However, always avoiding out-of-distribution terrain can be overly conservative, e.g., when novel terrain can be effectively analyzed using a physics-based model. To overcome this challenge, we introduce Physics-Informed Evidential Traversability (PIETRA), a self-supervised learning framework that integrates physics priors directly into the mathematical formulation of evidential neural networks and introduces physics knowledge implicitly through an uncertainty-aware, physics-informed training loss. Our evidential network seamlessly transitions between learned and physics-based predictions for out-of-distribution inputs. Additionally, the physics-informed loss regularizes the learned model, ensuring better alignment with the physics model. Extensive simulations and hardware experiments demonstrate that PIETRA improves both learning accuracy and navigation performance in environments with significant distribution shifts.</i></p>
+          <script xml:space="preserve" language="JavaScript">
+            hideblock('2024_pietra_abs');
+          </script>
+          </div>
+        </td>
+      </tr>
+
+
+  
+    <tr class="pub">
+      <td class="pub_thumbnail">
+          <img class="pub" src="images/2024_cgd.png" alt="image not found" width="93%">
+      </td>
+      <td class="pub_text">
+        <p><a href="https://arxiv.org/abs/2405.01758" target="_blank">
+        <heading>CGD: Constraint-Guided Diffusion Policies for UAV Trajectory Planning</heading></a><br>
+        Kota Kondo, Andrea Tagliabue, <b>Xiaoyi Cai</b>, Claudius Tewari, Olivia Garcia, Marcos Espitia-Alvarez, Jonathan P. How<br>
+        <span class="pub_venue">arXiv</span>
+        </p>
+  
+        <div>
+          <a href="https://arxiv.org/pdf/2405.01758" target="_blank">paper</a> |
+          <a href="javascript:toggleblock('2024_cgd_abs')">abstract</a>
+  
+        <p align="justify"> <i id="2024_cgd_abs">Traditional optimization-based planners, while effective, suffer from high computational costs, resulting in slow trajectory generation. A successful strategy to reduce computation time involves using Imitation Learning (IL) to develop fast neural network (NN) policies from those planners, which are treated as expert demonstrators. Although the resulting NN policies are effective at quickly generating trajectories similar to those from the expert, (1) their output does not explicitly account for dynamic feasibility, and (2) the policies do not accommodate changes in the constraints different from those used during training.
+          To overcome these limitations, we propose Constraint-Guided Diffusion (CGD), a novel IL-based approach to trajectory planning. CGD leverages a hybrid learning/online optimization scheme that combines diffusion policies with a surrogate efficient optimization problem, enabling the generation of collision-free, dynamically feasible trajectories. The key ideas of CGD include dividing the original challenging optimization problem solved by the expert into two more manageable sub-problems: (a) efficiently finding collision-free paths, and (b) determining a dynamically-feasible time-parametrization for those paths to obtain a trajectory. Compared to conventional neural network architectures, we demonstrate through numerical evaluations significant improvements in performance and dynamic feasibility under scenarios with new constraints never encountered during training.</i></p>
+        <script xml:space="preserve" language="JavaScript">
+          hideblock('2024_cgd_abs');
+        </script>
+        </div>
+      </td>
+    </tr>
+  
+
+
+
+
     <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Journal</sectionheading></td></tr>
 
     <tr class="pub">
@@ -537,36 +596,6 @@
     </td>
   </tr>
 
-  
-
-
-  <tr><td style="padding-top: 20px; padding-bottom: 0px;"><sectionheading style="font-size: 22px;">&nbsp;&nbsp;Preprint</sectionheading></td></tr>
-
-
-  
-    <tr class="pub">
-      <td class="pub_thumbnail">
-          <img class="pub" src="images/2024_cgd.png" alt="image not found" width="93%">
-      </td>
-      <td class="pub_text">
-        <p><a href="https://arxiv.org/abs/2405.01758" target="_blank">
-        <heading>CGD: Constraint-Guided Diffusion Policies for UAV Trajectory Planning</heading></a><br>
-        Kota Kondo, Andrea Tagliabue, <b>Xiaoyi Cai</b>, Claudius Tewari, Olivia Garcia, Marcos Espitia-Alvarez, Jonathan P. How<br>
-        <span class="pub_venue">ArXiv Preprint</span>
-        </p>
-  
-        <div>
-          <a href="https://arxiv.org/pdf/2405.01758" target="_blank">paper</a> |
-          <a href="javascript:toggleblock('2024_cgd_abs')">abstract</a>
-  
-        <p align="justify"> <i id="2024_cgd_abs">Traditional optimization-based planners, while effective, suffer from high computational costs, resulting in slow trajectory generation. A successful strategy to reduce computation time involves using Imitation Learning (IL) to develop fast neural network (NN) policies from those planners, which are treated as expert demonstrators. Although the resulting NN policies are effective at quickly generating trajectories similar to those from the expert, (1) their output does not explicitly account for dynamic feasibility, and (2) the policies do not accommodate changes in the constraints different from those used during training.
-          To overcome these limitations, we propose Constraint-Guided Diffusion (CGD), a novel IL-based approach to trajectory planning. CGD leverages a hybrid learning/online optimization scheme that combines diffusion policies with a surrogate efficient optimization problem, enabling the generation of collision-free, dynamically feasible trajectories. The key ideas of CGD include dividing the original challenging optimization problem solved by the expert into two more manageable sub-problems: (a) efficiently finding collision-free paths, and (b) determining a dynamically-feasible time-parametrization for those paths to obtain a trajectory. Compared to conventional neural network architectures, we demonstrate through numerical evaluations significant improvements in performance and dynamic feasibility under scenarios with new constraints never encountered during training.</i></p>
-        <script xml:space="preserve" language="JavaScript">
-          hideblock('2024_cgd_abs');
-        </script>
-        </div>
-      </td>
-    </tr>
   
 
 
